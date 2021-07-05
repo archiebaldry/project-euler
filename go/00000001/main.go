@@ -3,11 +3,16 @@ package main
 import "fmt"
 
 func main() {
+	fmt.Println(multiplesSum(-100))
+	fmt.Println(multiplesSum(1000))
+}
+
+func multiplesSum(limit int) int {
 	var sum int
-	for i := 3; i < 1000; i++ {
+	for i := 3; i < limit; i++ {
 		if i%3 == 0 || i%5 == 0 {
 			sum += i
 		}
 	}
-	fmt.Println(sum)
+	return sum
 }
